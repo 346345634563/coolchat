@@ -1,0 +1,16 @@
+.messages {
+    height: 70vh;
+    overflow-y: scroll;
+    text-align: left;
+    padding: 30px;
+}
+
+.fixed-height-img {
+    padding-left: 10px;
+    height: 250px;
+    width: auto;
+}
+
+p {
+    margin: 10px;
+}

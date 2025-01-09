@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "app-chat-a292d",
+    "production": "app-chat-a292d"
+  },
+  "targets": {},
+  "etags": {}
+}

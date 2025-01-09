@@ -1,0 +1,24 @@
+<form (ngSubmit)="onPublishMessage()" [formGroup]="messageForm">
+  <mat-form-field class="new-message">
+    <input matInput name="message" type="text" formControlName="msg"/>
+    <input
+        #file
+        name="file"
+        type="file"
+        style="display: none"
+        accept="image/*"
+        (change)="fileChanged($event)"
+    />
+    <button mat-icon-button matSuffix type="button" (click)="file.click()">
+      @if (hasImage) {
+        <mat-icon>image</mat-icon>
+      }
+      @else {
+        <mat-icon>add_photo_alternate</mat-icon>
+      }
+    </button>
+    <button mat-icon-button matSuffix type="submit">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="send"></mat-icon>
+    </button>
+  </mat-form-field>
+</form>

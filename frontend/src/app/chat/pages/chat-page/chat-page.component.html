@@ -1,0 +1,9 @@
+<div class="chat">
+  <div class="chat-logout-button">
+    <button mat-flat-button (click)="onLogout()">Quitter</button>
+  </div>
+  <div class="chat-messages">
+    <app-messages/>
+    <app-new-message-form (publishMessage)="onPublishMessage($event)"/>
+  </div>
+</div>

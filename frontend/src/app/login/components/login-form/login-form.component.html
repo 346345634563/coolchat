@@ -1,0 +1,12 @@
+<form class="form" (ngSubmit)="onLogin()" [formGroup]="loginForm">
+  <mat-form-field>
+    <mat-label> Nom d'usager</mat-label>
+    <input matInput name="username" type="text" formControlName="username" data-testid="user-input"/>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Mot de passe</mat-label>
+    <input matInput name="password" type="password" formControlName="password" data-testid="password-input"/>
+  </mat-form-field>
+  <div class="error" data-testid="error-message"> {{ errorMessage }}</div>
+  <button mat-flat-button type="submit" data-testid="connect-button">Connexion</button>
+</form>

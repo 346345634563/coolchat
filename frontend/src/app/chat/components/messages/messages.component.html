@@ -1,0 +1,17 @@
+<div #messagesContainer class="messages">
+  @for( m of messages; track $index; let i = $index) {
+    <div>
+      @if(showDateHeader(messages, i)) {
+        <h3>
+          {{ m.timestamp | date }}
+        </h3>
+      }
+      <p>
+        [{{ m.timestamp | date : 'hh:mm' }}] {{ m.username }} : {{ m.text }}
+      </p>
+      @if(m.imageUrl){
+        <img src="{{m.imageUrl}}" alt="User uploaded image" class="fixed-height-img">
+      }
+    </div>
+  }
+</div>
